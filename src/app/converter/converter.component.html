@@ -1,0 +1,19 @@
+
+<mat-form-field class="example-full-width">
+  <input matInput type="number" [placeholder]="placeholder" [(ngModel)]="newSize" (keyup.enter)="addSize()"/>
+</mat-form-field>
+
+
+<mat-list role="list">
+  <mat-list-item *ngFor="let size of sizes">
+    <div appBigFile [size]="size">
+      {{ size | formatFileSize }}
+    </div>
+  </mat-list-item>
+</mat-list>
+
+
+
+
+
+
